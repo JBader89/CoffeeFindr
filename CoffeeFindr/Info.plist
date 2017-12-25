@@ -24,6 +24,10 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Location is required to find out where the nearest coffee shops are to you.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Location is required to find out where the nearest coffee shops are to you.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
