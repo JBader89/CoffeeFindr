@@ -8,14 +8,22 @@
 
 import UIKit
 import CoreLocation
+import SwiftyJSON
 import FoursquareAPIClient
 
-class CoffeeViewController: UIViewController, CLLocationManagerDelegate {
+class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var coffeeTableView: UITableView!
+    
     var locationManager: CLLocationManager!
+    let numberOfCoffeeShops: Int = 50
+    var coffeeShops: [CoffeeShop]! = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        coffeeTableView.delegate = self
+        coffeeTableView.dataSource = self
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -28,7 +36,28 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: CLLocationManagerDelegate
+    // MARK: - UITableViewDataSource
+    
+    func tableView(_ tableView: UITableView, numberOfSectionsInTableView section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return coffeeShops.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "CoffeeCell")!
+        cell.textLabel?.text = coffeeShops[indexPath.row].name
+        cell.detailTextLabel?.text = "\(coffeeShops[indexPath.row].distance ?? 0)" + " meters away"
+        return cell
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // MARK: - CLLocationManagerDelegate
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
@@ -42,7 +71,7 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate {
     func getNearbyCoffeeShops(locValue:CLLocationCoordinate2D){
         let parameter: [String: String] = [
             "ll": "\(locValue.latitude), \(locValue.longitude)",
-            "limit": "10",
+            "limit": "\(numberOfCoffeeShops)",
             "categoryId": "4bf58dd8d48988d1e0931735"
             ];
         
@@ -51,8 +80,14 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate {
         client.request(path: "venues/search", parameter: parameter) { result in
             switch result {
             case let .success(data):
-                let json = try! JSONSerialization.jsonObject(with: data, options: [])
-                print(json)
+                let json = JSON(data: data)
+                //print(json["response"]["venues"])
+                for i in 0...self.numberOfCoffeeShops {
+                    if let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].int {
+                        self.coffeeShops.append(CoffeeShop(name: name, distance: distance))
+                    }
+                }
+                self.coffeeTableView.reloadData()
                 
             case let .failure(error):
                 switch error {
