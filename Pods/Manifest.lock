@@ -1,12 +1,15 @@
 PODS:
   - FoursquareAPIClient (4.0.0)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - FoursquareAPIClient
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   FoursquareAPIClient: 02c86b352aab28a538c9947b3b62097deafe5159
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: afa1c5e99092e5d5bf8f28c611b3a93ea384be3f
+PODFILE CHECKSUM: dc183af3819f00d982e69e53c36cccccd920a456
 
 COCOAPODS: 1.2.1

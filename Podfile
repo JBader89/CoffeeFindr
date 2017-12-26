@@ -7,5 +7,6 @@ target 'CoffeeFindr' do
 
   # Pods for CoffeeFindr
 	pod 'FoursquareAPIClient'
+	pod ‘SwiftyJSON’
 
 end

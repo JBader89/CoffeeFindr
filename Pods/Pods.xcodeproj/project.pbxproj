@@ -3,23 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		003576CA42CEE1842D4B3C71FF2801A8 /* FoursquareAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC8D78103271FD2E612026DB45CD1B0 /* FoursquareAuthViewController.swift */; };
-		035C2F7EF43FE9A5EFDB4BF88FA714B1 /* FoursquareAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EC8DAAD36317D56C257B6799F408DB /* FoursquareAuthClient.swift */; };
+		003576CA42CEE1842D4B3C71FF2801A8 /* FoursquareAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563410CB4EFA09A7CE52AC8604DD70B8 /* FoursquareAuthViewController.swift */; };
+		035C2F7EF43FE9A5EFDB4BF88FA714B1 /* FoursquareAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28F6EE06706E4320449665AD28C638 /* FoursquareAuthClient.swift */; };
 		2F81EB40E26CC1B5289FFED7BFFA45FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		891EF284F679568266A50D8A51611258 /* FoursquareAPIClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F5C63B92A5C5CEC68F895B3EDFAB068F /* FoursquareAPIClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F985D1336874DA24084BF7D74CDEFD8 /* Pods-CoffeeFindr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB35174A977333A9F98BA8F3694F84ED /* Pods-CoffeeFindr-dummy.m */; };
-		9FD3DCDED1320B167E3BFE7E9154FAA6 /* Pods-CoffeeFindr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF182799C372DC4EFBC4925C527B1BA /* Pods-CoffeeFindr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B90780642DA61F6184B83DCBF71106D2 /* FoursquareAPIClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C79CE5F37EA86B646AFCFDF33E1CF2A3 /* FoursquareAPIClient-dummy.m */; };
-		E76683FC7D63A67D149B47AA1C1C8B63 /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11D7E9F072117B45E69A222E5CE108 /* FoursquareAPIClient.swift */; };
-		E8F5745AC449FC55069EA8A7CF9811DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		30BAA3B6A4E69F8E580C348C1E4BD423 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5082898CB29D1C0A5E4F872B9C6359CE /* Pods-CoffeeFindr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AB35174A977333A9F98BA8F3694F84ED /* Pods-CoffeeFindr-dummy.m */; };
+		891EF284F679568266A50D8A51611258 /* FoursquareAPIClient-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CDE0E680720C4D5AC22F791CE4B5800F /* FoursquareAPIClient-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD76FA35F8C2162D480812693149336D /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D67545A4DE4DED95082F88999320B45 /* SwiftyJSON-dummy.m */; };
+		B90780642DA61F6184B83DCBF71106D2 /* FoursquareAPIClient-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2656E6D73A3EC0A16BEF592A67BAEE67 /* FoursquareAPIClient-dummy.m */; };
+		BA470098F79E9A975A41E8536340CDCB /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E44E35FA1AD7D4670E88C36802276F /* SwiftyJSON.swift */; };
+		C8E84FA0A8959D97B3927F9EE013F088 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E61ECCEFF55A9569718BDDD2ADC10E1 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B7E2526238F531030ED3FD163C2E28 /* Pods-CoffeeFindr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDF182799C372DC4EFBC4925C527B1BA /* Pods-CoffeeFindr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E76683FC7D63A67D149B47AA1C1C8B63 /* FoursquareAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800A383588A947D09F10BADB93B527C6 /* FoursquareAPIClient.swift */; };
+		F18C61B5B9DCE0382B57665DCEA5C037 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		898C8A2FB6DABD87766571975C41E660 /* PBXContainerItemProxy */ = {
+		86E3627968B30DA5A7FDEA1E8313A855 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A77067FB1E3709E6ED9ADFE2519D926E;
+			remoteInfo = SwiftyJSON;
+		};
+		F45B401FC1FDD687D4AF841CAFA07E7C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -29,45 +40,61 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AC8D78103271FD2E612026DB45CD1B0 /* FoursquareAuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthViewController.swift; path = FoursquareAPIClient/FoursquareAuthViewController.swift; sourceTree = "<group>"; };
-		21EC8DAAD36317D56C257B6799F408DB /* FoursquareAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthClient.swift; path = FoursquareAPIClient/FoursquareAuthClient.swift; sourceTree = "<group>"; };
-		3DCA19B467CFD95D05AA9F7CFAF6ADA6 /* FoursquareAPIClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoursquareAPIClient.xcconfig; sourceTree = "<group>"; };
+		2656E6D73A3EC0A16BEF592A67BAEE67 /* FoursquareAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoursquareAPIClient-dummy.m"; sourceTree = "<group>"; };
+		3025AED20D497B6E4D5EA3558D83ADDB /* FoursquareAPIClient.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FoursquareAPIClient.xcconfig; sourceTree = "<group>"; };
 		45D592CDA050901795FCE40CAF4D43E7 /* Pods-CoffeeFindr-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CoffeeFindr-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4C11D7E9F072117B45E69A222E5CE108 /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAPIClient.swift; path = FoursquareAPIClient/FoursquareAPIClient.swift; sourceTree = "<group>"; };
-		530E51C9FC4733C2A1012A6AE3FB2EE1 /* FoursquareAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoursquareAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		563410CB4EFA09A7CE52AC8604DD70B8 /* FoursquareAuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthViewController.swift; path = FoursquareAPIClient/FoursquareAuthViewController.swift; sourceTree = "<group>"; };
+		578D5C7098ED33DC7EB07E734C1C2398 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB4186B417BF9DF71F83BA192570099 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
 		6527B33AC7D310B5DBF360BC77538E18 /* Pods-CoffeeFindr-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeeFindr-resources.sh"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		72873606434830C166200BD321F14E80 /* Pods_CoffeeFindr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoffeeFindr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F28F6EE06706E4320449665AD28C638 /* FoursquareAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAuthClient.swift; path = FoursquareAPIClient/FoursquareAuthClient.swift; sourceTree = "<group>"; };
 		751C873CC836DCFD41E0BB7E184C40D2 /* Pods-CoffeeFindr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeeFindr.debug.xcconfig"; sourceTree = "<group>"; };
-		755FBE81904107240B1E24602012C203 /* FoursquareAPIClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FoursquareAPIClient.modulemap; sourceTree = "<group>"; };
+		800A383588A947D09F10BADB93B527C6 /* FoursquareAPIClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FoursquareAPIClient.swift; path = FoursquareAPIClient/FoursquareAPIClient.swift; sourceTree = "<group>"; };
 		88DDEEAFE1E1CD350B148B87C455B7A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8D67545A4DE4DED95082F88999320B45 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		99F529733275859088C7F60B0206A4E2 /* Pods-CoffeeFindr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CoffeeFindr.release.xcconfig"; sourceTree = "<group>"; };
+		9B2D2E66754D376B34ACDD9ADF5EF081 /* FoursquareAPIClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FoursquareAPIClient.modulemap; sourceTree = "<group>"; };
+		9E61ECCEFF55A9569718BDDD2ADC10E1 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		A5C7A55D38FDB00E20558718AD7F8673 /* Pods-CoffeeFindr-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CoffeeFindr-frameworks.sh"; sourceTree = "<group>"; };
 		AB35174A977333A9F98BA8F3694F84ED /* Pods-CoffeeFindr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CoffeeFindr-dummy.m"; sourceTree = "<group>"; };
-		C79CE5F37EA86B646AFCFDF33E1CF2A3 /* FoursquareAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FoursquareAPIClient-dummy.m"; sourceTree = "<group>"; };
-		CBBDFECED48BFE474322A6B048D6013E /* FoursquareAPIClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-prefix.pch"; sourceTree = "<group>"; };
+		BEF1DF62D7F2116A148C087C33D2A4EE /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
+		C426B20C1D369EA8C0110FB83E38B60F /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		C77A7A1B872644C0321D7F7A8666E581 /* FoursquareAPIClient-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-prefix.pch"; sourceTree = "<group>"; };
+		C8E44E35FA1AD7D4670E88C36802276F /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		CD4831234D396F9C2E15692109D9180E /* FoursquareAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FoursquareAPIClient.framework; path = FoursquareAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE0E680720C4D5AC22F791CE4B5800F /* FoursquareAPIClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-umbrella.h"; sourceTree = "<group>"; };
+		DB97DA702FC8BD6AD9A52BB62F245E46 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD41570CFCB57E08E78E034957AAC20A /* Pods_CoffeeFindr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CoffeeFindr.framework; path = "Pods-CoffeeFindr.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4CC20B9D4B63C86C02418BEB80B729 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDF182799C372DC4EFBC4925C527B1BA /* Pods-CoffeeFindr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CoffeeFindr-umbrella.h"; sourceTree = "<group>"; };
-		F5A77EF5C66507B563EEB96ED8BD4395 /* Pods-CoffeeFindr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CoffeeFindr.modulemap"; sourceTree = "<group>"; };
-		F5C63B92A5C5CEC68F895B3EDFAB068F /* FoursquareAPIClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FoursquareAPIClient-umbrella.h"; sourceTree = "<group>"; };
+		F5A77EF5C66507B563EEB96ED8BD4395 /* Pods-CoffeeFindr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CoffeeFindr.modulemap"; sourceTree = "<group>"; };
 		F8E1233B1084AA42FAD5B925FFDB4BC9 /* Pods-CoffeeFindr-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CoffeeFindr-acknowledgements.plist"; sourceTree = "<group>"; };
-		FAC83BE2E9C715C74FF9895E7A99389B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3448D40A5B933AEFEC1DD10B6281007D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8F5745AC449FC55069EA8A7CF9811DE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		48D122EB2D923B095D3AF2D9D2B5688F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2F81EB40E26CC1B5289FFED7BFFA45FE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51EF0FD9CE9289E5CF55C766CF953180 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F18C61B5B9DCE0382B57665DCEA5C037 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7140A839F50A72BA9A84F7E14ED7C84E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30BAA3B6A4E69F8E580C348C1E4BD423 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,12 +119,49 @@
 			path = "Target Support Files/Pods-CoffeeFindr";
 			sourceTree = "<group>";
 		};
-		4398DC2ECAB068F32589868626325A5D /* Pods */ = {
+		0986EB3B91B74D6977D3374ABD112CDE /* FoursquareAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				E1663F6496F24906CD5C19EE9E8467A3 /* FoursquareAPIClient */,
+				800A383588A947D09F10BADB93B527C6 /* FoursquareAPIClient.swift */,
+				6F28F6EE06706E4320449665AD28C638 /* FoursquareAuthClient.swift */,
+				563410CB4EFA09A7CE52AC8604DD70B8 /* FoursquareAuthViewController.swift */,
+				42D908ED9258E9A9666C484A3151468E /* Support Files */,
+			);
+			name = FoursquareAPIClient;
+			path = FoursquareAPIClient;
+			sourceTree = "<group>";
+		};
+		2F06F6D5075A1C4D14ABF60BA8F961A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0986EB3B91B74D6977D3374ABD112CDE /* FoursquareAPIClient */,
+				D3EF6A0C7012BFF335F13A5782EBDF3E /* SwiftyJSON */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F83F655E0ABE1858D2A7A9FE2A6BD3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4831234D396F9C2E15692109D9180E /* FoursquareAPIClient.framework */,
+				DD41570CFCB57E08E78E034957AAC20A /* Pods_CoffeeFindr.framework */,
+				578D5C7098ED33DC7EB07E734C1C2398 /* SwiftyJSON.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42D908ED9258E9A9666C484A3151468E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B2D2E66754D376B34ACDD9ADF5EF081 /* FoursquareAPIClient.modulemap */,
+				3025AED20D497B6E4D5EA3558D83ADDB /* FoursquareAPIClient.xcconfig */,
+				2656E6D73A3EC0A16BEF592A67BAEE67 /* FoursquareAPIClient-dummy.m */,
+				C77A7A1B872644C0321D7F7A8666E581 /* FoursquareAPIClient-prefix.pch */,
+				CDE0E680720C4D5AC22F791CE4B5800F /* FoursquareAPIClient-umbrella.h */,
+				DB97DA702FC8BD6AD9A52BB62F245E46 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FoursquareAPIClient";
 			sourceTree = "<group>";
 		};
 		739DB4C4D184C01842F25296A8A04D75 /* Targets Support Files */ = {
@@ -113,24 +177,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				4398DC2ECAB068F32589868626325A5D /* Pods */,
-				C3B7F935845A4E2B060909CFA07DBB34 /* Products */,
+				2F06F6D5075A1C4D14ABF60BA8F961A6 /* Pods */,
+				3F83F655E0ABE1858D2A7A9FE2A6BD3B /* Products */,
 				739DB4C4D184C01842F25296A8A04D75 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8B7F533318FCDEB3428BEA1DC4FC1F91 /* Support Files */ = {
+		8C7AD2EFDDF08784790B65DAA022FC7B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				755FBE81904107240B1E24602012C203 /* FoursquareAPIClient.modulemap */,
-				3DCA19B467CFD95D05AA9F7CFAF6ADA6 /* FoursquareAPIClient.xcconfig */,
-				C79CE5F37EA86B646AFCFDF33E1CF2A3 /* FoursquareAPIClient-dummy.m */,
-				CBBDFECED48BFE474322A6B048D6013E /* FoursquareAPIClient-prefix.pch */,
-				F5C63B92A5C5CEC68F895B3EDFAB068F /* FoursquareAPIClient-umbrella.h */,
-				FAC83BE2E9C715C74FF9895E7A99389B /* Info.plist */,
+				DD4CC20B9D4B63C86C02418BEB80B729 /* Info.plist */,
+				C426B20C1D369EA8C0110FB83E38B60F /* SwiftyJSON.modulemap */,
+				BEF1DF62D7F2116A148C087C33D2A4EE /* SwiftyJSON.xcconfig */,
+				8D67545A4DE4DED95082F88999320B45 /* SwiftyJSON-dummy.m */,
+				5DB4186B417BF9DF71F83BA192570099 /* SwiftyJSON-prefix.pch */,
+				9E61ECCEFF55A9569718BDDD2ADC10E1 /* SwiftyJSON-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/FoursquareAPIClient";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -141,15 +205,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C3B7F935845A4E2B060909CFA07DBB34 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				530E51C9FC4733C2A1012A6AE3FB2EE1 /* FoursquareAPIClient.framework */,
-				72873606434830C166200BD321F14E80 /* Pods_CoffeeFindr.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,33 +213,40 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E1663F6496F24906CD5C19EE9E8467A3 /* FoursquareAPIClient */ = {
+		D3EF6A0C7012BFF335F13A5782EBDF3E /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				4C11D7E9F072117B45E69A222E5CE108 /* FoursquareAPIClient.swift */,
-				21EC8DAAD36317D56C257B6799F408DB /* FoursquareAuthClient.swift */,
-				0AC8D78103271FD2E612026DB45CD1B0 /* FoursquareAuthViewController.swift */,
-				8B7F533318FCDEB3428BEA1DC4FC1F91 /* Support Files */,
+				C8E44E35FA1AD7D4670E88C36802276F /* SwiftyJSON.swift */,
+				8C7AD2EFDDF08784790B65DAA022FC7B /* Support Files */,
 			);
-			path = FoursquareAPIClient;
+			name = SwiftyJSON;
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0F36BCAAF5C3EDF778A7EB8213D49C0B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9FD3DCDED1320B167E3BFE7E9154FAA6 /* Pods-CoffeeFindr-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1548FD546E6462E45B293868CE39B4EB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				891EF284F679568266A50D8A51611258 /* FoursquareAPIClient-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B43D2EA042423B72FAE87716716DB35 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8E84FA0A8959D97B3927F9EE013F088 /* SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A45EF2DA3B91045A2AD3BC6C57CC2083 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1B7E2526238F531030ED3FD163C2E28 /* Pods-CoffeeFindr-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,25 +267,43 @@
 			);
 			name = FoursquareAPIClient;
 			productName = FoursquareAPIClient;
-			productReference = 530E51C9FC4733C2A1012A6AE3FB2EE1 /* FoursquareAPIClient.framework */;
+			productReference = CD4831234D396F9C2E15692109D9180E /* FoursquareAPIClient.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		562F7715B9968E2076B2FD5081D5B606 /* Pods-CoffeeFindr */ = {
+		77549CC901759EE6D3382C386E78871E /* Pods-CoffeeFindr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C520FE6BD4E7A4D22AA386CE6C41E9CC /* Build configuration list for PBXNativeTarget "Pods-CoffeeFindr" */;
+			buildConfigurationList = A6768166177C366C4E77807256D8E3F7 /* Build configuration list for PBXNativeTarget "Pods-CoffeeFindr" */;
 			buildPhases = (
-				3E08BFE7974C6163D3A8828F2DFB164B /* Sources */,
-				3448D40A5B933AEFEC1DD10B6281007D /* Frameworks */,
-				0F36BCAAF5C3EDF778A7EB8213D49C0B /* Headers */,
+				973320363979237C3E281BBF004B6892 /* Sources */,
+				51EF0FD9CE9289E5CF55C766CF953180 /* Frameworks */,
+				A45EF2DA3B91045A2AD3BC6C57CC2083 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D3BBED752411B43D492DAA1771BFB6AA /* PBXTargetDependency */,
+				249774A5C2824A4855364944B1F6622E /* PBXTargetDependency */,
+				032E7FE99A8C99192AB76ED939CE1ACD /* PBXTargetDependency */,
 			);
 			name = "Pods-CoffeeFindr";
 			productName = "Pods-CoffeeFindr";
-			productReference = 72873606434830C166200BD321F14E80 /* Pods_CoffeeFindr.framework */;
+			productReference = DD41570CFCB57E08E78E034957AAC20A /* Pods_CoffeeFindr.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A77067FB1E3709E6ED9ADFE2519D926E /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C16C284CFE1C0DE877E36BE8236BC55 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				7C474BDCCAF66A94800BF7142E468333 /* Sources */,
+				7140A839F50A72BA9A84F7E14ED7C84E /* Frameworks */,
+				5B43D2EA042423B72FAE87716716DB35 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = 578D5C7098ED33DC7EB07E734C1C2398 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -233,7 +313,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -243,22 +323,32 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C3B7F935845A4E2B060909CFA07DBB34 /* Products */;
+			productRefGroup = 3F83F655E0ABE1858D2A7A9FE2A6BD3B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4710D1A59B3FF3CF67BA72ABA2EF565F /* FoursquareAPIClient */,
-				562F7715B9968E2076B2FD5081D5B606 /* Pods-CoffeeFindr */,
+				77549CC901759EE6D3382C386E78871E /* Pods-CoffeeFindr */,
+				A77067FB1E3709E6ED9ADFE2519D926E /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3E08BFE7974C6163D3A8828F2DFB164B /* Sources */ = {
+		7C474BDCCAF66A94800BF7142E468333 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F985D1336874DA24084BF7D74CDEFD8 /* Pods-CoffeeFindr-dummy.m in Sources */,
+				AD76FA35F8C2162D480812693149336D /* SwiftyJSON-dummy.m in Sources */,
+				BA470098F79E9A975A41E8536340CDCB /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		973320363979237C3E281BBF004B6892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5082898CB29D1C0A5E4F872B9C6359CE /* Pods-CoffeeFindr-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,15 +366,55 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D3BBED752411B43D492DAA1771BFB6AA /* PBXTargetDependency */ = {
+		032E7FE99A8C99192AB76ED939CE1ACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = A77067FB1E3709E6ED9ADFE2519D926E /* SwiftyJSON */;
+			targetProxy = 86E3627968B30DA5A7FDEA1E8313A855 /* PBXContainerItemProxy */;
+		};
+		249774A5C2824A4855364944B1F6622E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FoursquareAPIClient;
 			target = 4710D1A59B3FF3CF67BA72ABA2EF565F /* FoursquareAPIClient */;
-			targetProxy = 898C8A2FB6DABD87766571975C41E660 /* PBXContainerItemProxy */;
+			targetProxy = F45B401FC1FDD687D4AF841CAFA07E7C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		10725F488124EB8ED345EDDF4021E086 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF1DF62D7F2116A148C087C33D2A4EE /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		33F8F7AAAA85E50D89ADDD29179D4D1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -295,9 +425,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -305,20 +433,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -347,9 +469,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -357,21 +477,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -395,7 +509,7 @@
 		};
 		4FDC84D96C8C9496A864EE60D82939AC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCA19B467CFD95D05AA9F7CFAF6ADA6 /* FoursquareAPIClient.xcconfig */;
+			baseConfigurationReference = 3025AED20D497B6E4D5EA3558D83ADDB /* FoursquareAPIClient.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -428,7 +542,114 @@
 			};
 			name = Debug;
 		};
-		82E8494CB0613A3B64A80404136CB352 /* Debug */ = {
+		66C77A6089873AFFC838F4661E5764C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEF1DF62D7F2116A148C087C33D2A4EE /* SwiftyJSON.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		92CE00E27E5DD0C29D39E0FD3F263DF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99F529733275859088C7F60B0206A4E2 /* Pods-CoffeeFindr.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-CoffeeFindr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CoffeeFindr/Pods-CoffeeFindr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_CoffeeFindr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C25C44C20DA8D223092B1C0FB291D470 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3025AED20D497B6E4D5EA3558D83ADDB /* FoursquareAPIClient.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FoursquareAPIClient/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FoursquareAPIClient;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FDA13BF46C1B893C8A2478020A69714B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 751C873CC836DCFD41E0BB7E184C40D2 /* Pods-CoffeeFindr.debug.xcconfig */;
 			buildSettings = {
@@ -467,81 +688,18 @@
 			};
 			name = Debug;
 		};
-		C25C44C20DA8D223092B1C0FB291D470 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3DCA19B467CFD95D05AA9F7CFAF6ADA6 /* FoursquareAPIClient.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FoursquareAPIClient/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FoursquareAPIClient/FoursquareAPIClient.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = FoursquareAPIClient;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CD39CDD99FB8EF107DB0BD072BD2ECF1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99F529733275859088C7F60B0206A4E2 /* Pods-CoffeeFindr.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CoffeeFindr/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CoffeeFindr/Pods-CoffeeFindr.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CoffeeFindr;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C16C284CFE1C0DE877E36BE8236BC55 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66C77A6089873AFFC838F4661E5764C5 /* Debug */,
+				10725F488124EB8ED345EDDF4021E086 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2835BC8A8B3F053EDD03F8CE1A6334D4 /* Build configuration list for PBXNativeTarget "FoursquareAPIClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -560,11 +718,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C520FE6BD4E7A4D22AA386CE6C41E9CC /* Build configuration list for PBXNativeTarget "Pods-CoffeeFindr" */ = {
+		A6768166177C366C4E77807256D8E3F7 /* Build configuration list for PBXNativeTarget "Pods-CoffeeFindr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82E8494CB0613A3B64A80404136CB352 /* Debug */,
-				CD39CDD99FB8EF107DB0BD072BD2ECF1 /* Release */,
+				FDA13BF46C1B893C8A2478020A69714B /* Debug */,
+				92CE00E27E5DD0C29D39E0FD3F263DF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
