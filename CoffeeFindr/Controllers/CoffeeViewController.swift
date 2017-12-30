@@ -49,7 +49,9 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "CoffeeCell")!
         cell.textLabel?.text = coffeeShops[indexPath.row].name
-        cell.detailTextLabel?.text = "\(coffeeShops[indexPath.row].distance ?? 0)" + " meters away"
+        let milesAwayUnrounded = coffeeShops[indexPath.row].distance! * 0.000621371192
+        let milesAway = round(10.0 * milesAwayUnrounded) / 10.0
+        cell.detailTextLabel?.text = "\(milesAway)" + " miles away"
         return cell
     }
     
@@ -90,7 +92,7 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
                 let json = JSON(data: data)
                 print(json)
                 for i in 0...self.numberOfCoffeeShops {
-                    if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].int {
+                    if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].double {
                         self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
                     }
                 }

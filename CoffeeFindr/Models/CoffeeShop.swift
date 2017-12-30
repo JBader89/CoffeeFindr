@@ -28,7 +28,7 @@ class CoffeeShop: NSObject {
     var name: String? = ""
     var formattedPhone: String? = ""
     var formattedAddress: String? = ""
-    var distance: Int?
+    var distance: Double?
     var latitude: Double?
     var longitude: Double?
     
@@ -36,7 +36,7 @@ class CoffeeShop: NSObject {
     override init() {
         super.init()
     }
-    init(id: String, name: String, distance: Int) {
+    init(id: String, name: String, distance: Double) {
         super.init()
         self.id = id
         self.name = name
