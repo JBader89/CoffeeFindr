@@ -96,6 +96,8 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
                         self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
                     }
                 }
+                self.coffeeShops = self.coffeeShops.sorted(by: { Int($0.distance!) < Int($1.distance!) })
+
                 self.coffeeTableView.reloadData()
                 
             case let .failure(error):
