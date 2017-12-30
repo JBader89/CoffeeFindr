@@ -24,7 +24,7 @@ class CoffeeShop: NSObject {
     }
     
     // MARK: - Properties
-    var id: Int = 0
+    var id: String? = ""
     var name: String? = ""
     var formattedPhone: String? = ""
     var formattedAddress: String? = ""
@@ -36,8 +36,9 @@ class CoffeeShop: NSObject {
     override init() {
         super.init()
     }
-    init(name: String, distance: Int) {
+    init(id: String, name: String, distance: Int) {
         super.init()
+        self.id = id
         self.name = name
         self.distance = distance
     }
@@ -46,7 +47,7 @@ class CoffeeShop: NSObject {
         self.initWith(json)
     }
     func initWith(_ json: JSON) {
-        id = json[Keys.id.rawValue].int ?? 0
+        id = json[Keys.id.rawValue].string ?? ""
         name = json[Keys.name.rawValue].string ?? ""
         formattedAddress = json[Keys.formattedAddress.rawValue].string ?? ""
         formattedPhone = json[Keys.formattedPhone.rawValue].string ?? ""

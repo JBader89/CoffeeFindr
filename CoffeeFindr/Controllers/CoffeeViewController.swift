@@ -17,7 +17,9 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
     
     var locationManager: CLLocationManager!
     let numberOfCoffeeShops: Int = 50
+    var selectedIndex: Int = 0
     var coffeeShops: [CoffeeShop]! = []
+    var locationValue: CLLocationCoordinate2D?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,11 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        let vc = storyboard?.instantiateViewController(withIdentifier: "coffeeShopVC") as? CoffeeShopController
+        vc?.coffeeShop = coffeeShops[selectedIndex]
+        vc?.locValue = locationValue
+        self.navigationController?.pushViewController(vc!, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -81,10 +88,10 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
             switch result {
             case let .success(data):
                 let json = JSON(data: data)
-                //print(json["response"]["venues"])
+                print(json)
                 for i in 0...self.numberOfCoffeeShops {
-                    if let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].int {
-                        self.coffeeShops.append(CoffeeShop(name: name, distance: distance))
+                    if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].int {
+                        self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
                     }
                 }
                 self.coffeeTableView.reloadData()
@@ -103,6 +110,7 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+        locationValue = locValue
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         
         getNearbyCoffeeShops(locValue: locValue)
