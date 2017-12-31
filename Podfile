@@ -8,5 +8,5 @@ target 'CoffeeFindr' do
   # Pods for CoffeeFindr
 	pod 'FoursquareAPIClient'
 	pod ‘SwiftyJSON’
-
+	pod 'SDWebImage'
 end

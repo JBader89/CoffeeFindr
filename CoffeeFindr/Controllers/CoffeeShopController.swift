@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import SwiftyJSON
+import SDWebImage
 import FoursquareAPIClient
 
 class CoffeeShopController: UIViewController {
@@ -22,14 +23,14 @@ class CoffeeShopController: UIViewController {
         let backItem = UIBarButtonItem()
         backItem.title = ""
         self.navigationController!.navigationBar.topItem!.backBarButtonItem = backItem
-        getNearbyCoffeeShops()
+        getCoffeeShopDetails()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func getNearbyCoffeeShops(){
+    func getCoffeeShopDetails(){
         let parameter: [String: String] = [
             "VENUE_ID": (coffeeShop?.id)!
         ];
@@ -60,17 +61,14 @@ class CoffeeShopController: UIViewController {
         let prefix = json["response"]["venue"]["bestPhoto"]["prefix"].string
         let suffix = json["response"]["venue"]["bestPhoto"]["suffix"].string
         var string = (prefix! + suffix!)
-        string.insert("o", at: string.index(string.startIndex, offsetBy: 33))
-        string.insert("r", at: string.index(string.startIndex, offsetBy: 34))
-        string.insert("i", at: string.index(string.startIndex, offsetBy: 35))
-        string.insert("g", at: string.index(string.startIndex, offsetBy: 36))
-        string.insert("i", at: string.index(string.startIndex, offsetBy: 37))
-        string.insert("n", at: string.index(string.startIndex, offsetBy: 38))
-        string.insert("a", at: string.index(string.startIndex, offsetBy: 39))
-        string.insert("l", at: string.index(string.startIndex, offsetBy: 40))
+        string.insert("5", at: string.index(string.startIndex, offsetBy: 33))
+        string.insert("0", at: string.index(string.startIndex, offsetBy: 34))
+        string.insert("0", at: string.index(string.startIndex, offsetBy: 35))
+        string.insert("x", at: string.index(string.startIndex, offsetBy: 36))
+        string.insert("5", at: string.index(string.startIndex, offsetBy: 37))
+        string.insert("0", at: string.index(string.startIndex, offsetBy: 38))
+        string.insert("0", at: string.index(string.startIndex, offsetBy: 39))
 
-        let url = URL(string: string.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil))
-        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
-        coffeeShopImageView.image = UIImage(data: data!)
+        coffeeShopImageView.sd_setImage(with: URL(string: string.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil)), placeholderImage: UIImage(named: ""))
     }
 }

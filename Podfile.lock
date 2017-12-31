@@ -1,15 +1,20 @@
 PODS:
   - FoursquareAPIClient (4.0.0)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - FoursquareAPIClient
+  - SDWebImage
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   FoursquareAPIClient: 02c86b352aab28a538c9947b3b62097deafe5159
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: dc183af3819f00d982e69e53c36cccccd920a456
+PODFILE CHECKSUM: d1c81c94f1c4c08129309b04855ac43cce1267af
 
 COCOAPODS: 1.2.1
