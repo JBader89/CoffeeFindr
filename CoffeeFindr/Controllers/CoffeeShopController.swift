@@ -12,12 +12,16 @@ import SwiftyJSON
 import FoursquareAPIClient
 
 class CoffeeShopController: UIViewController {
+    @IBOutlet weak var coffeeShopImageView: UIImageView!
+    
     var coffeeShop: CoffeeShop?
     var locValue: CLLocationCoordinate2D?
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = coffeeShop?.name
-        navigationItem.backBarButtonItem?.title = "Back"
+        let backItem = UIBarButtonItem()
+        backItem.title = ""
+        self.navigationController!.navigationBar.topItem!.backBarButtonItem = backItem
         getNearbyCoffeeShops()
     }
     
@@ -37,6 +41,7 @@ class CoffeeShopController: UIViewController {
             switch result {
             case let .success(data):
                 let json = JSON(data: data)
+                self.updateCoffeeShopPhoto(json: json)
                 print(json)
                 
             case let .failure(error):
@@ -49,5 +54,23 @@ class CoffeeShopController: UIViewController {
                 }
             }
         }
+    }
+    
+    func updateCoffeeShopPhoto(json: JSON){
+        let prefix = json["response"]["venue"]["bestPhoto"]["prefix"].string
+        let suffix = json["response"]["venue"]["bestPhoto"]["suffix"].string
+        var string = (prefix! + suffix!)
+        string.insert("o", at: string.index(string.startIndex, offsetBy: 33))
+        string.insert("r", at: string.index(string.startIndex, offsetBy: 34))
+        string.insert("i", at: string.index(string.startIndex, offsetBy: 35))
+        string.insert("g", at: string.index(string.startIndex, offsetBy: 36))
+        string.insert("i", at: string.index(string.startIndex, offsetBy: 37))
+        string.insert("n", at: string.index(string.startIndex, offsetBy: 38))
+        string.insert("a", at: string.index(string.startIndex, offsetBy: 39))
+        string.insert("l", at: string.index(string.startIndex, offsetBy: 40))
+
+        let url = URL(string: string.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil))
+        let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+        coffeeShopImageView.image = UIImage(data: data!)
     }
 }

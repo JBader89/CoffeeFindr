@@ -90,7 +90,6 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
             switch result {
             case let .success(data):
                 let json = JSON(data: data)
-                print(json)
                 for i in 0...self.numberOfCoffeeShops {
                     if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].double {
                         self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
