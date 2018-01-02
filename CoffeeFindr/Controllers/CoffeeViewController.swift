@@ -89,6 +89,7 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
         client.request(path: "venues/search", parameter: parameter) { result in
             switch result {
             case let .success(data):
+                self.coffeeShops.removeAll()
                 let json = JSON(data: data)
                 for i in 0...self.numberOfCoffeeShops {
                     if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].double {
