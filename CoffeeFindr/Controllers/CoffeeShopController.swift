@@ -58,17 +58,17 @@ class CoffeeShopController: UIViewController {
     }
     
     func updateCoffeeShopPhoto(json: JSON){
-        let prefix = json["response"]["venue"]["bestPhoto"]["prefix"].string
-        let suffix = json["response"]["venue"]["bestPhoto"]["suffix"].string
-        var string = (prefix! + suffix!)
-        string.insert("5", at: string.index(string.startIndex, offsetBy: 33))
-        string.insert("0", at: string.index(string.startIndex, offsetBy: 34))
-        string.insert("0", at: string.index(string.startIndex, offsetBy: 35))
-        string.insert("x", at: string.index(string.startIndex, offsetBy: 36))
-        string.insert("5", at: string.index(string.startIndex, offsetBy: 37))
-        string.insert("0", at: string.index(string.startIndex, offsetBy: 38))
-        string.insert("0", at: string.index(string.startIndex, offsetBy: 39))
+        if let prefix = json["response"]["venue"]["bestPhoto"]["prefix"].string, let suffix = json["response"]["venue"]["bestPhoto"]["suffix"].string {
+            var string = (prefix + suffix)
+            string.insert("5", at: string.index(string.startIndex, offsetBy: 33))
+            string.insert("0", at: string.index(string.startIndex, offsetBy: 34))
+            string.insert("0", at: string.index(string.startIndex, offsetBy: 35))
+            string.insert("x", at: string.index(string.startIndex, offsetBy: 36))
+            string.insert("5", at: string.index(string.startIndex, offsetBy: 37))
+            string.insert("0", at: string.index(string.startIndex, offsetBy: 38))
+            string.insert("0", at: string.index(string.startIndex, offsetBy: 39))
 
-        coffeeShopImageView.sd_setImage(with: URL(string: string.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil)), placeholderImage: UIImage(named: ""))
+            coffeeShopImageView.sd_setImage(with: URL(string: string.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil)), placeholderImage: UIImage(named: ""))
+        }
     }
 }

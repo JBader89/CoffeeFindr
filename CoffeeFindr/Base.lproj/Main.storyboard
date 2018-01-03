@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,24 +72,57 @@
             <objects>
                 <viewController storyboardIdentifier="coffeeShopVC" id="VBR-Wb-QbM" customClass="CoffeeShopController" customModule="CoffeeFindr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wg1-Mq-LR9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-v4-mSR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4K1-C4-l2f">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zIA-yP-Sd6">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uAZ-q5-TBf">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="uAZ-q5-TBf" secondAttribute="height" multiplier="1:1" id="lGI-Du-PVe"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="uAZ-q5-TBf" firstAttribute="leading" secondItem="zIA-yP-Sd6" secondAttribute="leading" id="0ew-AA-59f"/>
+                                            <constraint firstAttribute="trailing" secondItem="uAZ-q5-TBf" secondAttribute="trailing" id="1nW-c9-lGv"/>
+                                            <constraint firstItem="uAZ-q5-TBf" firstAttribute="top" secondItem="zIA-yP-Sd6" secondAttribute="top" id="t4S-SC-epO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zIA-yP-Sd6" secondAttribute="trailing" id="Jf9-o6-Tmo"/>
+                                    <constraint firstItem="zIA-yP-Sd6" firstAttribute="leading" secondItem="4K1-C4-l2f" secondAttribute="leading" id="OJc-7c-hau"/>
+                                    <constraint firstItem="zIA-yP-Sd6" firstAttribute="top" secondItem="4K1-C4-l2f" secondAttribute="top" id="YCq-ks-PVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="zIA-yP-Sd6" secondAttribute="bottom" id="dhk-ya-3yL"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BsI-Hl-P8z" firstAttribute="top" secondItem="4K1-C4-l2f" secondAttribute="top" constant="20" id="7bz-u9-UFy"/>
+                            <constraint firstItem="zIA-yP-Sd6" firstAttribute="width" secondItem="wg1-Mq-LR9" secondAttribute="width" id="BB5-Th-mfe"/>
+                            <constraint firstItem="4K1-C4-l2f" firstAttribute="leading" secondItem="BsI-Hl-P8z" secondAttribute="leading" id="DN6-IK-MBG"/>
+                            <constraint firstItem="BsI-Hl-P8z" firstAttribute="trailing" secondItem="4K1-C4-l2f" secondAttribute="trailing" id="Hba-ce-vVh"/>
+                            <constraint firstItem="zIA-yP-Sd6" firstAttribute="height" secondItem="wg1-Mq-LR9" secondAttribute="height" id="ZXy-gV-umX"/>
+                            <constraint firstItem="BsI-Hl-P8z" firstAttribute="bottom" secondItem="4K1-C4-l2f" secondAttribute="bottom" id="l2u-5B-Ns1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BsI-Hl-P8z"/>
                     </view>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="coffeeShopImageView" destination="rhB-v4-mSR" id="NRB-Qz-MiK"/>
+                        <outlet property="coffeeShopImageView" destination="uAZ-q5-TBf" id="YCL-3U-9Yr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVh-aX-CXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1664.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1664.8" y="133.13343328335833"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GNY-h1-lRe">
