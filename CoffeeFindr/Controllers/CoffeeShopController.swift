@@ -14,6 +14,11 @@ import FoursquareAPIClient
 
 class CoffeeShopController: UIViewController {
     @IBOutlet weak var coffeeShopImageView: UIImageView!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var daysLabel: UILabel!
+    @IBOutlet weak var hoursLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
     var coffeeShop: CoffeeShop?
     var locValue: CLLocationCoordinate2D?
@@ -42,8 +47,26 @@ class CoffeeShopController: UIViewController {
             switch result {
             case let .success(data):
                 let json = JSON(data: data)
-                self.updateCoffeeShopPhoto(json: json)
+                
                 print(json)
+                
+                self.descriptionTextView.text = json["response"]["venue"]["description"].string!
+                
+                let addressLabel1 = json["response"]["venue"]["location"]["formattedAddress"][0].string!
+                let addressLabel2 = json["response"]["venue"]["location"]["formattedAddress"][1].string!
+                let addressLabel3 = json["response"]["venue"]["location"]["formattedAddress"][2].string!
+                self.addressLabel.text = addressLabel1 + "\n" + addressLabel2 + "\n" + addressLabel3
+                
+                self.phoneNumberLabel.text = json["response"]["venue"]["contact"]["formattedPhone"].string!
+                
+                self.daysLabel.text = ""
+                self.hoursLabel.text = ""
+                for i in 0...json["response"]["venue"]["hours"]["timeframes"].array!.count - 1 {
+                    self.daysLabel.text = self.daysLabel.text! + json["response"]["venue"]["hours"]["timeframes"][i]["days"].string! + "\n"
+                    self.hoursLabel.text = self.hoursLabel.text! + json["response"]["venue"]["hours"]["timeframes"][i]["open"][0]["renderedTime"].string! + "\n"
+                }
+                
+                self.updateCoffeeShopPhoto(json: json)
                 
             case let .failure(error):
                 switch error {
