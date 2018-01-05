@@ -16,12 +16,14 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var coffeeTableView: UITableView!
+    @IBOutlet weak var slider: UISlider!
     
     var locationManager: CLLocationManager!
     let numberOfCoffeeShops: Int = 50
     var selectedIndex: Int = 0
     var coffeeShops: [CoffeeShop]! = []
     var locationValue: CLLocationCoordinate2D?
+    var regionRadius: CLLocationDistance = 2000
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,7 +97,6 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
             case let .success(data):
                 self.coffeeShops.removeAll()
                 let json = JSON(data: data)
-                print(json)
                 for i in 0...self.numberOfCoffeeShops {
                     if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].double {
                         self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
@@ -125,7 +126,6 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         locationValue = locValue
         
-        let regionRadius: CLLocationDistance = 2000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(locValue,
                                                                   regionRadius, regionRadius)
         mapView.setRegion(coordinateRegion, animated: true)
@@ -133,7 +133,6 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
         dropPin.coordinate = locValue
         dropPin.title = "Your Location"
         mapView.addAnnotation(dropPin)
-
         
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         
@@ -142,4 +141,10 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
         locationManager.stopUpdatingLocation()
     }
     
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        print(sender.value)
+        regionRadius = (CLLocationDistance(16000 / Int(sender.value)))
+        mapView.setRegion(MKCoordinateRegionMakeWithDistance(locationValue!, regionRadius, regionRadius), animated: true)
+    }
 }
+
