@@ -71,7 +71,11 @@ class CoffeeShopController: UIViewController {
                 let addressLabel3 = json["response"]["venue"]["location"]["formattedAddress"][2].string!
                 self.addressLabel.text = addressLabel1 + "\n" + addressLabel2 + "\n" + addressLabel3
                 
-                self.phoneNumberLabel.text = json["response"]["venue"]["contact"]["formattedPhone"].string!
+                if let phoneNumber = json["response"]["venue"]["contact"]["formattedPhone"].string {
+                    self.phoneNumberLabel.text = phoneNumber
+                } else {
+                    self.phoneNumberLabel.text = "No Number Available"
+                }
                 
                 self.daysLabel.text = ""
                 self.hoursLabel.text = ""

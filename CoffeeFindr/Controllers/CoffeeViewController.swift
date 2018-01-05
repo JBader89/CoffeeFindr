@@ -134,15 +134,12 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
         dropPin.title = "Your Location"
         mapView.addAnnotation(dropPin)
         
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
-        
         getNearbyCoffeeShops(locValue: locValue)
         
         locationManager.stopUpdatingLocation()
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
-        print(sender.value)
         regionRadius = (CLLocationDistance(16000 / Int(sender.value)))
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(locationValue!, regionRadius, regionRadius), animated: true)
     }
