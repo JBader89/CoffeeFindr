@@ -10,9 +10,11 @@ import UIKit
 import CoreLocation
 import SwiftyJSON
 import FoursquareAPIClient
+import MapKit
 
-class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate {
+class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var coffeeTableView: UITableView!
     
     var locationManager: CLLocationManager!
@@ -23,6 +25,8 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.delegate = self
         
         coffeeTableView.delegate = self
         coffeeTableView.dataSource = self
@@ -91,9 +95,14 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
             case let .success(data):
                 self.coffeeShops.removeAll()
                 let json = JSON(data: data)
+                print(json)
                 for i in 0...self.numberOfCoffeeShops {
                     if let id = json["response"]["venues"][i]["id"].string, let name = json["response"]["venues"][i]["name"].string, let distance = json["response"]["venues"][i]["location"]["distance"].double {
                         self.coffeeShops.append(CoffeeShop(id: id, name: name, distance: distance))
+                        let dropPin = MKPointAnnotation()
+                        dropPin.coordinate = CLLocationCoordinate2D(latitude: CLLocationDegrees(json["response"]["venues"][i]["location"]["lat"].float!), longitude: CLLocationDegrees(json["response"]["venues"][i]["location"]["lng"].float!))
+                        dropPin.title = json["response"]["venues"][i]["name"].string!
+                        self.mapView.addAnnotation(dropPin)
                     }
                 }
                 self.coffeeShops = self.coffeeShops.sorted(by: { Int($0.distance!) < Int($1.distance!) })
@@ -115,6 +124,17 @@ class CoffeeViewController: UIViewController, CLLocationManagerDelegate, UITable
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
         locationValue = locValue
+        
+        let regionRadius: CLLocationDistance = 2000
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(locValue,
+                                                                  regionRadius, regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+        let dropPin = MKPointAnnotation()
+        dropPin.coordinate = locValue
+        dropPin.title = "Your Location"
+        mapView.addAnnotation(dropPin)
+
+        
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         
         getNearbyCoffeeShops(locValue: locValue)

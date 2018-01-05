@@ -10,6 +10,7 @@
 		14A428C0524FAACC5B84D8F0 /* Pods_CoffeeFindr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BEF9CB4006FC627E9310A6 /* Pods_CoffeeFindr.framework */; };
 		B81A315A1FF1B97500EBC4CF /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81A31591FF1B97500EBC4CF /* CoffeeShop.swift */; };
 		B864786C1FF351D3004187DA /* CoffeeShopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B864786B1FF351D2004187DA /* CoffeeShopController.swift */; };
+		B86478701FFF4CD7004187DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B864786F1FFF4CD7004187DA /* MapKit.framework */; };
 		B8817FDE1FF0E5AA00A3CDE1 /* CoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8817FDD1FF0E5AA00A3CDE1 /* CoffeeViewController.swift */; };
 		B8E0965E1FF09C8F00BCEA54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E0965D1FF09C8F00BCEA54 /* AppDelegate.swift */; };
 		B8E096631FF09C8F00BCEA54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8E096611FF09C8F00BCEA54 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		912C672AF1B7CF1A4677F77E /* Pods-CoffeeFindr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoffeeFindr.release.xcconfig"; path = "Pods/Target Support Files/Pods-CoffeeFindr/Pods-CoffeeFindr.release.xcconfig"; sourceTree = "<group>"; };
 		B81A31591FF1B97500EBC4CF /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		B864786B1FF351D2004187DA /* CoffeeShopController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoffeeShopController.swift; path = /Users/jeremybader/CoffeeFindr/CoffeeFindr/Controllers/CoffeeShopController.swift; sourceTree = "<absolute>"; };
+		B864786F1FFF4CD7004187DA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B8817FDD1FF0E5AA00A3CDE1 /* CoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeViewController.swift; sourceTree = "<group>"; };
 		B8E0965A1FF09C8F00BCEA54 /* CoffeeFindr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeFindr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E0965D1FF09C8F00BCEA54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B86478701FFF4CD7004187DA /* MapKit.framework in Frameworks */,
 				14A428C0524FAACC5B84D8F0 /* Pods_CoffeeFindr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +50,7 @@
 		66CC405EF7640BD3678DA52A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B864786F1FFF4CD7004187DA /* MapKit.framework */,
 				F1BEF9CB4006FC627E9310A6 /* Pods_CoffeeFindr.framework */,
 			);
 			name = Frameworks;
@@ -146,6 +150,11 @@
 					B8E096591FF09C8F00BCEA54 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
