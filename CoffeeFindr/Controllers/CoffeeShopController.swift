@@ -57,8 +57,6 @@ class CoffeeShopController: UIViewController {
             case let .success(data):
                 let json = JSON(data: data)
                 
-                print(json)
-                
                 if let description = json["response"]["venue"]["description"].string
                 {
                     self.descriptionTextView.text = description
